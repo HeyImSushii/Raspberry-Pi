@@ -9,11 +9,11 @@ echo "${COLOUR_YELLOW}Configuring Raspberrry Pi...\e[0m"
 read -p 'Hostname: ' hostname
 
 echo "${COLOUR_GREEN}The hostname has been changed to ${HOSTNAME}\e[0m"
-hostname $hostname
+sudo hostname $hostname
 
 # Enabling SSH
-systemctl enable sshd
-systemctl start sshd
+sudo systemctl enable sshd
+sudo systemctl start sshd
 echo "${COLOUR_GREEN}SSH has been enabeled.\e[0m"
 
 # IP whitelisted
@@ -21,7 +21,7 @@ sudo ufw allow from 128.39.112.1/22 to any port 22 proto tcp
 echo "${COLOUR_GREEN}Student IP-range has been whitelisted.\e[0m"
 
 # Change URL idk
-sudo sed "s/Kongsberg/Vestfold/g" "/etc/xdg/openbox/autostart"
+sudo sed -i "s/Kongsberg/Vestfold/g" "/etc/xdg/openbox/autostart"
 echo "${COLOUR_GREEN}Kiosk URL updated.\e[0m"
 
 echo "${COLOUR_YELLOW}Raspberrry Pi has been configured!\e[0m"
