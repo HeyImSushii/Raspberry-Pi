@@ -30,6 +30,14 @@ sleep 3
 sudo sed -i "s/Kongsberg/Vestfold/g" "/etc/xdg/openbox/autostart"
 echo "${COLOUR_GREEN}Kiosk URL updated.\e[0m"
 
+# Remove Chromium config files and cache
+sudo rm -rf ~/.config/Chromium/Singleton*
+sudo rm -rf ~/.config/chromium/Singleton*
+sudo rm -r ~/.cache/Chromium/Default/Cache/*
+sudo rm -r ~/.cache/chromium/Default/Cache/*
+echo "${COLOUR_GREEN}Chromium config and cache files was successfully removed.\e[0m"
+
+# Successfully configured
 echo "${COLOUR_YELLOW}Raspberrry Pi has been configured!\e[0m"
 
 sleep 3
