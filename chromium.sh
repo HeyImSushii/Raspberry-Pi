@@ -7,7 +7,10 @@ sudo rm -rf ~/.config/Chromium/Singleton*
 sudo rm -rf ~/.config/chromium/Singleton*
 sudo rm -r ~/.cache/Chromium/Default/Cache/*
 sudo rm -r ~/.cache/chromium/Default/Cache/*
-sudo reboot
 
-echo "${COLOUR_GREEN}Kernel Update not required, already running ${CURRENT_KERNEL}.\e[0m"
-echo "${COLOUR_YELLOW}Exiting script in 5 seconds.\e[0m"
+echo "${COLOUR_GREEN}Chromium config and cache files was successfully removed.\e[0m"
+echo "${COLOUR_YELLOW}Rebooting in 10 seconds...\e[0m"
+sleep 10
+echo "${COLOUR_YELLOW}Rebooting...\e[0m"
+sleep 2
+sudo reboot
