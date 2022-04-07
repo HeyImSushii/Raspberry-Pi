@@ -9,8 +9,8 @@ cpu_temp = CPUTemperature.temperature
 memory_usage = psutil.virtual_memory().percent
 
 def sec_to_hours(seconds):
-    a=str(seconds//3600)
-    b=str((seconds%3600)//60)
+    a=str(seconds/3600)
+    b=str((seconds%3600)/60)
     c=str((seconds%3600)%60)
     d=["{} hours {} mins {} seconds".format(a, b, c)]
     return d
