@@ -9,7 +9,7 @@ cpu_temp = CPUTemperature.temperature
 memory_usage = psutil.virtual_memory().percent
 
 print(hostname)
-print(str(uptime%3600)//60)
+print(uptime%3600/60)
 print(str(cpu_usage) + "%")
 print(str(cpu_temp) + "*C")
 print(str(memory_usage) + "%")
