@@ -2,10 +2,10 @@ from dis import dis
 import psutil
 import platform
 from gpiozero import CPUTemperature
-import os
+import time
 
 hostname = platform.uname().node
-uptime = os.popen("uptime").read()
+uptime = time.time() - psutil.boot_time()
 cpu_usage = psutil.cpu_percent()
 cpu_temp = CPUTemperature.temperature
 memory_usage = psutil.virtual_memory().percent
